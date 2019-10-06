@@ -59,8 +59,9 @@ class Credentials:
 
                                 '''
                                 Credentials.credentials_lists.append(self)
-
-
+                @classmethod        
+                def display_credentials(cls):
+                                return cls.credentials_lists        
 
               
         
