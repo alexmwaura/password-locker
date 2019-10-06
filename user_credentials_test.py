@@ -1,5 +1,5 @@
 import unittest
-import random
+import pyperclip
 from user_credentials import User,Credentials 
 
 class TestUser(unittest.TestCase):
@@ -98,6 +98,16 @@ class TestCredentials(unittest.TestCase):
                                 account.save_credentials()
                                 credential_exists = Credentials.find_by_account_name("insta")
                                 self.assertEqual(credential_exists,account)
+
+                def test_copy_credentials(self):
+                                '''
+                                Test to confirm that we are copying the email address from a found credential
+                                '''
+
+                                self.new_credential.save_credentials()
+                                Credentials.copy_credentials("instagram") 
+
+                                self.assertEqual(self.new_credential.a_account,pyperclip.paste())
 
 
 
