@@ -32,11 +32,7 @@ class User:
                         '''
                         User.users_list.append(self)     
 
-                @classmethod
-                def login_by_password(cls,number):
-                                for user in cls.users_list:
-                                        if user.password == number:
-                                                return user          
+            
 
 
 class Credentials:
@@ -45,6 +41,20 @@ class Credentials:
                 To generate new instances of users
                 '''
                 credentials_lists = []
+                user_credentials_list = []
+
+                @classmethod
+                def user_login(cls,first_name,password):
+                                '''
+                                Method that checks if the name and password entered match entries in the users_list
+
+                                '''
+                                current_user = ''
+                                for user in User.users_list:
+                                        if (user.first_name == first_name and user.password == password):
+                                                        current_user = user.first_name
+                                                        return current_user
+
 
                 def __init__(self,f_name,l_name,e_email,p_password):
                                 self.f_name = f_name
