@@ -33,7 +33,7 @@ class User:
                         User.users_list.append(self)     
 
                 @classmethod
-                def find_by_number(cls,number):
+                def login_by_password(cls,number):
                                 for user in cls.users_list:
                                         if user.password == number:
                                                 return user          
