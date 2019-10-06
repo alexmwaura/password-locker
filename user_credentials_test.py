@@ -87,6 +87,7 @@ class TestCredentials(unittest.TestCase):
                 def test_display_credentials(self):   
                                 self.assertEqual(Credentials.display_credentials(),Credentials.credentials_lists)
 
+
                 def test_find_by_account_name(self):
                                 '''
                                 Test to check if the find_by_account_name method returns the correct credential
@@ -99,6 +100,7 @@ class TestCredentials(unittest.TestCase):
                                 credential_exists = Credentials.find_by_account_name("insta")
                                 self.assertEqual(credential_exists,account)
 
+
                 def test_copy_credentials(self):
                                 '''
                                 Test to confirm that we are copying the email address from a found credential
@@ -108,6 +110,19 @@ class TestCredentials(unittest.TestCase):
                                 Credentials.copy_credentials("instagram") 
 
                                 self.assertEqual(self.new_credential.a_account,pyperclip.paste())
+
+
+                def test_delete_credentials(self):
+                                '''
+                                test_delete_credentials to test if we can delete credentials from our credential list
+                                '''
+
+                                self.new_credential.save_credentials()
+                                test_credentials = Credentials("account","test","user","test@user","12345")
+                                test_credentials.save_credentials()
+
+                                self.new_credential.save_credentials()
+                                self.assertEqual(len(Credentials.credentials_lists),3)
 
 
 
