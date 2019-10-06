@@ -1,4 +1,4 @@
-import math
+import pyperclip
 import random
 class User:
 
@@ -82,4 +82,9 @@ class Credentials:
 
                                 for credential in cls.credentials_lists:
                                                 if credential.a_account == a_account:
+                                                        
                                                                 return credential
+                @classmethod
+                def copy_credentials(cls,a_account):
+                                credential_found = Credentials.find_by_account_name(a_account)
+                                pyperclip.copy(credential_found.a_account)
