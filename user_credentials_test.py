@@ -27,25 +27,8 @@ class TestUser(unittest.TestCase):
                 self.new_user.save_users()
                 self.assertEqual(len(User.users_list),1)
 
-        def test_save_multiple_users(self):
-
-                '''
-                test_save_multiple_users to check if we can save multiple users
-                objects to our user_list
-                '''
-
-                self.new_user.save_users()
-                test_user = User("Test","user","1122")
-                test_user.save_users()
-                self.assertEqual(len(User.users_list),2)
-
-        def test_user_login(self):
-                        self.new_user.save_users()
-                        test_login = User("Test","user","1122")
-                        test_login.save_users()
-
-                        user_login = User.login_by_password("1122")
-                        self.assertEqual(user_login.first_name,test_login.first_name)                  
+        
+                         
 
 class TestCredentials(unittest.TestCase):
                 '''
@@ -53,6 +36,23 @@ class TestCredentials(unittest.TestCase):
                 Test class that defines test case for Credentials class behaviour 
 
                 '''
+                def test_user_login(self):
+
+                        '''
+                        Function to test whether the login in function login_user works as expected
+                        '''
+                        self.new_user = User("Alex","mwaura","12345")
+                        self.new_user.save_users()
+                        user_login = User("test","user","1122")
+                        user_login.save_users()
+
+                        for user in User.users_list:
+                                        if user.first_name == user_login.first_name and user.password == user_login.password:
+                                                        current_user = user.first_name
+                                                        return current_user
+                                                        
+                        
+
                 def setUp(self):
                                 self.new_credential = Credentials("Alex","mwaura","alexmwaura@gmail.com","12345")
 
