@@ -84,6 +84,8 @@ class TestCredentials(unittest.TestCase):
                                 self.assertEqual(len(Credentials.credentials_lists),2)
 
 
+                def test_display_credentials(self):   
+                                self.assertEqual(Credentials.display_credentials(),Credentials.credentials_lists)
 
 
 
