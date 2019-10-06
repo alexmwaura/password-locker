@@ -1,5 +1,5 @@
 import pyperclip
-import random
+
 class User:
 
 
@@ -71,8 +71,14 @@ class Credentials:
 
                                 '''
                                 Credentials.credentials_lists.append(self)
+
+
                 def delete_credentials(self):
+
+
                                 Credentials.credentials_lists.remove(self)
+
+                
 
 
                 @classmethod 
