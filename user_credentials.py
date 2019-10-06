@@ -56,7 +56,9 @@ class Credentials:
                                                         return current_user
 
 
-                def __init__(self,f_name,l_name,e_email,p_password):
+                def __init__(self,a_account,f_name,l_name,e_email,p_password):
+
+                                self.a_account = a_account
                                 self.f_name = f_name
                                 self.l_name = l_name
                                 self.e_email = e_email
@@ -72,6 +74,12 @@ class Credentials:
                 @classmethod        
                 def display_credentials(cls):
                                 return cls.credentials_lists        
+                @classmethod
+                def find_by_account_name(cls,a_account):
+                                '''
+                                Method that takes in an account name and reurns a credential that matches that account.
+                                '''
 
-              
-        
+                                for credential in cls.credentials_lists:
+                                                if credential.a_account == a_account:
+                                                                return credential
