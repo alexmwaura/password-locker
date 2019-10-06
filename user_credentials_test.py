@@ -54,7 +54,7 @@ class TestCredentials(unittest.TestCase):
                         
 
                 def setUp(self):
-                                self.new_credential = Credentials("Alex","mwaura","alexmwaura@gmail.com","12345")
+                                self.new_credential = Credentials("instagram","Alex","mwaura","alexmwaura@gmail.com","12345")
 
                 def tearDown(self):
 
@@ -63,7 +63,7 @@ class TestCredentials(unittest.TestCase):
 
                 def test_init(self):
 
-
+                                self.assertEqual(self.new_credential.a_account,"instagram") 
                                 self.assertEqual(self.new_credential.f_name,"Alex")
                                 self.assertEqual(self.new_credential.l_name,"mwaura")
                                 self.assertEqual(self.new_credential.e_email,"alexmwaura@gmail.com")
@@ -79,7 +79,7 @@ class TestCredentials(unittest.TestCase):
 
                 def test_save_multiple_credentials(self):
                                 self.new_credential.save_credentials()
-                                test_credentials = Credentials("test","user","test@user","12345")
+                                test_credentials = Credentials("account","test","user","test@user","12345")
                                 test_credentials.save_credentials()
                                 self.assertEqual(len(Credentials.credentials_lists),2)
 
@@ -87,7 +87,17 @@ class TestCredentials(unittest.TestCase):
                 def test_display_credentials(self):   
                                 self.assertEqual(Credentials.display_credentials(),Credentials.credentials_lists)
 
+                def test_find_by_account_name(self):
+                                '''
+                                Test to check if the find_by_account_name method returns the correct credential
 
+                                '''
+
+                                self.new_credential.save_credentials()
+                                account = Credentials("insta","test","user","test@user","12345")
+                                account.save_credentials()
+                                credential_exists = Credentials.find_by_account_name("insta")
+                                self.assertEqual(credential_exists,account)
 
 
 
