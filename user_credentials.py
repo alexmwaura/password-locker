@@ -71,9 +71,15 @@ class Credentials:
 
                                 '''
                                 Credentials.credentials_lists.append(self)
-                @classmethod        
+                def delete_credentials(self):
+                                Credentials.credentials_lists.remove(self)
+
+
+                @classmethod 
                 def display_credentials(cls):
-                                return cls.credentials_lists        
+                                return cls.credentials_lists   
+
+
                 @classmethod
                 def find_by_account_name(cls,a_account):
                                 '''
@@ -84,6 +90,8 @@ class Credentials:
                                                 if credential.a_account == a_account:
                                                         
                                                                 return credential
+
+
                 @classmethod
                 def copy_credentials(cls,a_account):
                                 credential_found = Credentials.find_by_account_name(a_account)
