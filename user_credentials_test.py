@@ -44,7 +44,7 @@ class TestUser(unittest.TestCase):
                         test_login = User("Test","user","1122")
                         test_login.save_users()
 
-                        user_login = User.find_by_number("1122")
+                        user_login = User.login_by_password("1122")
                         self.assertEqual(user_login.first_name,test_login.first_name)                  
 
 class TestCredentials(unittest.TestCase):
