@@ -121,8 +121,8 @@ class TestCredentials(unittest.TestCase):
                                 test_credentials = Credentials("account","test","user","test@user","12345")
                                 test_credentials.save_credentials()
 
-                                self.new_credential.save_credentials()
-                                self.assertEqual(len(Credentials.credentials_lists),3)
+                                self.new_credential.delete_credentials()
+                                self.assertEqual(len(Credentials.credentials_lists),1)
 
 
 
