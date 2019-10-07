@@ -69,11 +69,13 @@ def copy_credentials(a_account):
 
 def delete_credential(credential):
         '''
+        Function to delete credentials
         '''
         credential.delete_credentials()
 
 def find_by_account_name(a_account):
         '''
+        function to find_by_account in order to search for existing credentials
         '''
         return Credentials.find_by_account_name(a_account)
 
