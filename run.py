@@ -66,6 +66,17 @@ def copy_credentials(a_account):
         '''
         return Credentials.copy_credentials(a_account)
 
+
+def delete_credential(credential):
+        '''
+        '''
+        credential.delete_credentials()
+
+def find_by_account_name(a_account):
+        '''
+        '''
+        return Credentials.find_by_account_name(a_account)
+
 def main():
         
         print("Hello, Welcome to password locker, enter user name")
@@ -110,7 +121,7 @@ def main():
 
                                 while True:
 
-                                        print("Navigation codes are as follows: \n cc :Create a credential \n dc :Display credentials \n co :Copy credentials \n ex :Exit")
+                                        print("Navigation codes are as follows: \n cc :Create a credential \n dc :Display credentials \n co :Copy credentials \n de :Delete credentials \n ex :Exit")
 
                                         short_code = input("Enter your choice: \n ").lower()
 
@@ -173,6 +184,18 @@ def main():
                                                         choice_account = input("Enter name of account you want to copy \n")
                                                         copy_credentials(choice_account)
                                                         print("-" * 20)
+
+                                        elif short_code == "de":
+
+                                                                print("Enter the account you want to delete")
+                                                                delete_account = input()
+
+                                                                if find_by_account_name(delete_account):
+                                                                        delete_credential(find_by_account_name(delete_account))
+                                                                else:
+                                                                        print('Cant find')
+
+
 
                                         else:
                                                         print("OOOPS! Option entered is wrong. Please try again.")
