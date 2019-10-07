@@ -185,6 +185,8 @@ def main():
 
                                                         choice_account = input("Enter name of account you want to copy \n")
                                                         copy_credentials(choice_account)
+                                                        print("\n")
+                                                        print("This account has been copied successfully")
                                                         print("-" * 20)
 
                                         elif short_code == "de":
