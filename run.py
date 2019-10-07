@@ -128,7 +128,7 @@ def main():
                                                         print("Choose option for entering a password:")
                                                         print("\n")
 
-                                                        print(" ep :Enter your own passsword \n gp :Automatically generate a password \n ex :exit")
+                                                        print(" ep :Enter your own passsword \n gp :Automatically generate a password")
 
                                                         p_choice = input("Enter your option \n").lower()
 
@@ -143,8 +143,9 @@ def main():
                                                                         p_password = generate_passwords()
                                                                         break
 
-                                                        elif p_choice == "ex":
-                                                                        break
+                                                        # elif p_choice == "ex":
+                                                        #                 print("Thankyou bye...")
+                                                        #                 break
 
                                                         else:
                                                                         print("OOOPS!!! Wrong choice entered try again")                
@@ -152,10 +153,43 @@ def main():
 
                                                 print(f"Credentials have been created: \n Account name: {a_account} \n Password: {p_password}")
                                                 print("\n")
+
+                                        elif short_code == "dc":
+                                        
+                                                        if display_credentials(user_name):
+                                                                        print("Here is a list of all your credentials")
+                                                                        print("\n")
+
+                                                                        for credential in display_credentials(user_name):
+                                                                                        print(f"Account name: {credential.a_account} \n Your names are: {credential.f_name} {credential.l_name} \n Your email is: {credential.e_email} \n Password is: {credential.p_password}" )
+                                                                                        print("\n")
+
+                                                        else:
+                                                                        print("You do not seem to have any credentials saved")
+                                                                        print("\n")
+
+                                        elif short_code == "co":
+
+                                                        choice_account = input("Enter name of account you want to copy \n")
+                                                        copy_credentials(choice_account)
+                                                        print("-" * 20)
+
+                                        else:
+                                                        print("OOOPS! Option entered is wrong. Please try again.")
+
                         else:
-                                        print("Account does not exist create account to login")
-                                        print("\n") 
+                                        print("OOOPS! Option entered is wrong. Please try again.")
+
+        else:
+                        print("OOOPS! Option entered is wrong. Please try again.")                                                                               
+
+
+
+
                         
+                        
+                 
+
 
 if __name__ == "__main__":
     main()
