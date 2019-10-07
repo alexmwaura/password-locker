@@ -24,7 +24,8 @@ As a user I would like:
 | Display codes for navigation | **Successful login** | Choose an option: cc - Create Credential, dc - Display Credentials, co Copy Credentials, de Delete credentials, ex - exit |
 | Display prompt for creating a credential | **Enter: cc** | Enter the account name, your username and password |
 | Display a list of credentials | **Enter: dc** | Prints a list of saved credentials |
-| Display prompt for which credential to copy | **Enter: co** | Enter the account name of the credential you wish to copy. | **Enter: de**  | Prompt to enter which account you want to delete and enter the account name to delete the account|
+| Display prompt for which credential to copy | **Enter: co** | Enter the account name of the credential you wish to copy. |
+| Delete credential | **Enter: de**  | Prompt to enter which account you want to delete and enter the account name to delete the account| 
 | Exit application | **Enter: ex** | Exit the current navigation stage |
 
 ## SetUp / Installation Requirements
