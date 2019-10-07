@@ -26,7 +26,7 @@ class User:
                         self.last_name = last_name
                         self.password = password
 
-                def save_users(self):
+                def save_user(self):
                         '''
                         save_users method saves users objects into user_list
                         '''
