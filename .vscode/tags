@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Credentials	../user_credentials.py	/^class Credentials:$/;"	kind:class	line:38
+TestCredentials	../user_credentials_test.py	/^class TestCredentials(unittest.TestCase):$/;"	kind:class	line:33
+TestUser	../user_credentials_test.py	/^class TestUser(unittest.TestCase):$/;"	kind:class	line:5
+User	../user_credentials.py	/^class User:$/;"	kind:class	line:3
+__init__	../user_credentials.py	/^                def __init__(self,a_account,f_name,l_name,e_email,p_password):$/;"	kind:member	line:59
+__init__	../user_credentials.py	/^                def __init__(self,first_name,last_name,password):$/;"	kind:member	line:13
+copy_credentials	../run.py	/^def copy_credentials(a_account):$/;"	kind:function	line:63
+copy_credentials	../user_credentials.py	/^                def copy_credentials(cls,a_account):$/;"	kind:member	line:102
+create_credential	../run.py	/^def create_credential(a_account,f_name,l_name,e_email,p_password): $/;"	kind:function	line:44
+create_user	../run.py	/^def create_user(fname,lname,password):$/;"	kind:function	line:6
+credentials_lists	../user_credentials.py	/^                credentials_lists = []$/;"	kind:variable	line:43
+delete_credentials	../user_credentials.py	/^                def delete_credentials(self):$/;"	kind:member	line:76
+display_credentials	../run.py	/^def display_credentials(self):$/;"	kind:function	line:58
+display_credentials	../user_credentials.py	/^                def display_credentials(cls):$/;"	kind:member	line:85
+find_by_account_name	../user_credentials.py	/^                def find_by_account_name(cls,a_account):$/;"	kind:member	line:90
+generate_passwords	../run.py	/^def generate_passwords():$/;"	kind:function	line:34
+main	../run.py	/^def main():$/;"	kind:function	line:69
+run.py	../run.py	1;"	kind:file	line:1
+save_credential	../run.py	/^def save_credential(credential):$/;"	kind:function	line:52
+save_credentials	../user_credentials.py	/^                def save_credentials(self):$/;"	kind:member	line:68
+save_credentials	../user_credentials_test.py	/^                def save_credentials(self):$/;"	kind:member	line:72
+save_user	../run.py	/^def save_user(user):$/;"	kind:function	line:15
+save_user	../user_credentials.py	/^                def save_user(self):$/;"	kind:member	line:29
+setUp	../user_credentials_test.py	/^                def setUp(self):$/;"	kind:member	line:56
+setUp	../user_credentials_test.py	/^        def setUp(self):$/;"	kind:member	line:9
+tearDown	../user_credentials_test.py	/^                def tearDown(self):$/;"	kind:member	line:59
+tearDown	../user_credentials_test.py	/^        def tearDown(self):$/;"	kind:member	line:13
+test_copy_credentials	../user_credentials_test.py	/^                def test_copy_credentials(self):$/;"	kind:member	line:104
+test_delete_credentials	../user_credentials_test.py	/^                def test_delete_credentials(self):$/;"	kind:member	line:115
+test_display_credentials	../user_credentials_test.py	/^                def test_display_credentials(self):   $/;"	kind:member	line:87
+test_find_by_account_name	../user_credentials_test.py	/^                def test_find_by_account_name(self):$/;"	kind:member	line:91
+test_init	../user_credentials_test.py	/^                def test_init(self):$/;"	kind:member	line:64
+test_init	../user_credentials_test.py	/^        def test_init(self):$/;"	kind:member	line:20
+test_save_multiple_credentials	../user_credentials_test.py	/^                def test_save_multiple_credentials(self):$/;"	kind:member	line:80
+test_save_users	../user_credentials_test.py	/^        def test_save_users(self):$/;"	kind:member	line:26
+test_user_login	../user_credentials_test.py	/^                def test_user_login(self):$/;"	kind:member	line:39
+user_credentials.py	../user_credentials.py	1;"	kind:file	line:1
+user_credentials_list	../user_credentials.py	/^                user_credentials_list = []$/;"	kind:variable	line:44
+user_credentials_test.py	../user_credentials_test.py	1;"	kind:file	line:1
+user_login	../user_credentials.py	/^                def user_login(cls,first_name,password):$/;"	kind:member	line:47
+users_list	../user_credentials.py	/^                users_list = []$/;"	kind:variable	line:11
+verify_user	../run.py	/^def verify_user(first_name,password):$/;"	kind:function	line:22
